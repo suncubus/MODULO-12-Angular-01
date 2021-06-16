@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>My Heroes</h2>
+  <div class="add">
+    
+    <input id="new-hero" #heroName placeholder="Hero Name"/>
+    <button (click)="add(heroName.value); heroName.value=''">
+      ADD
+    </button>
+  </div>
+
+  <ul>
+    <li *ngFor="let hero of heroes">
+      <a routerLink="/detail/{{hero.id}}">
+        <span class="list-id">{{hero.id}}</span> 
+        <span class="list-name">{{hero.name}}</span>
+      </a>
+      <button class="delete" title="Delete hero"
+        (click)="delete(hero)">x</button>
+    </li>
+  </ul>
+</div>
+<app-back-button></app-back-button>

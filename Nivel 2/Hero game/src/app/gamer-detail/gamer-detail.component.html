@@ -1,0 +1,9 @@
+
+<div class="container">
+    <h2>GAMER: {{gamers[id].name | uppercase}} {{gamers[id].id}}</h2>
+    <div class="detail">
+      <input id="gamer-name" [(ngModel)]="gamers[id].name" placeholder="Gamer name"/>
+      <button (click)="save()">MODIFY</button>
+    </div>    
+</div>
+<app-back-button></app-back-button>

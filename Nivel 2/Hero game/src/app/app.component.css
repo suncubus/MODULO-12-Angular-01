@@ -1,0 +1,24 @@
+/* AppComponent's private CSS styles  */
+/* Navigation link styles */
+nav{
+  display:flex;
+  justify-content: center;
+}
+nav a {
+  padding: .5rem 1rem;
+  text-decoration: none;
+  margin-right: .5rem;
+  display: inline-block;
+  background-color: #2abaff;
+  color: white;
+  border-radius: 1rem;
+}
+
+nav a:hover, nav a.active {
+  color: white;
+  background-color:  #42545C;
+}
+
+
+
+  

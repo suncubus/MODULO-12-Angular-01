@@ -1,0 +1,127 @@
+/* Global Styles */
+* {
+  font-family: 'Oswald', sans-serif;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  display:flex;
+  padding: 0 2rem;
+  justify-content: center;
+}
+body {
+
+  color: #333;
+  background: url(../src/assets/img/fondo.png) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size:cover;   
+  
+}
+h1 {
+  font-size: 1.5rem;
+  text-align: center;  
+}
+h2{
+  font-size: 1.1rem;
+  border-bottom: .1rem  dashed  black;
+}
+h3 {
+  font-size: 1rem;
+}
+h4 {
+  font-size: 3rem;
+  margin:0;
+}
+h5 {
+  font-size: .8rem;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+.visible{ display: 'block';}
+.no-visible{ display: 'none';}
+
+/*Containers*/
+.twoColumns{
+  display: flex;
+  flex-direction: row;
+}
+.container{
+  background-color: white;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  margin: 2% auto;
+  text-align: center;
+  border: .5rem solid black;
+  border-radius: 2rem;
+}
+
+/*Add*/
+.add{
+  display: flex;
+  flex-direction: row;
+}
+input, select {
+  width: 90%;
+  padding: .5rem;
+  margin: 1rem auto;
+  box-sizing: border-box;
+  font-size:.8rem;
+}
+button {
+  margin: 1rem 1rem 1rem 0;
+  padding: .5rem 1rem;
+  background-color: #188ed9;
+  color:white;
+  font-weight: bold;    
+}
+button:hover {
+   color: #188ed9;
+   background-color: white;
+}
+/*button > div:disabled{
+  opacity:0.4;
+}*/
+/*List*/
+ul{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+li {
+  width: 100%;
+  display:flex;
+  justify-content:space-between;
+  list-style-type: none;
+  padding: 0;
+  cursor: pointer;
+  margin: 0;
+  border-bottom: 1px dotted #188ed9;
+}
+ul li:last-child{
+  border-bottom:none;
+}
+/*gamers & heroes component styles*/
+.list-id{
+  display: inline-block;
+  width: 6rem;
+  text-align: start;
+  font-size: 1rem;
+  color: #188ed9; 
+}
+
+.list-name{
+  font-size: 1rem;
+  font-weight: bold;
+  color:black;
+}
+
+/*hero-detail & gamer-detail components styles*/
+.detail{
+  display:flex;
+  flex-direction:row;
+}

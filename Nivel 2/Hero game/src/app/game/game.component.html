@@ -1,0 +1,66 @@
+<div class="twoColumns">
+    <div class="container players-container">
+        <h3>PLAYER 1 {{p1}}{{po1}}</h3>
+ 
+        <select #player1 (change)="selectPlayer(player1.value,1)" [hidden] = false>
+            <option>Select Player</option>
+            <option *ngFor = "let gamer of gamers; index as i" [value]="gamer.id">{{gamer.name}}</option>
+        </select>
+        <div #cards1 [hidden] = true>
+            <div class="cards" *ngIf="displayCard">
+                <section *ngFor = "let GamerHeroes of selectedGamers[0].cards; index as i">
+                    <button class="card btnCard active" id="{{'0'+i}}" (click)="selectedHero(0,i)">
+                        <div>{{GamerHeroes.name}}</div>
+                        <div>{{GamerHeroes.power}}</div>
+                    </button>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="container players-container">
+        <h3>PLAYER 2 {{p2}}{{po2}}</h3>
+        <select #player2 (change)="selectPlayer(player2.value,2)" [hidden] = false [disabled] = true>
+            <option>Select Player</option>
+            <option *ngFor = "let gamer of gamers; index as i" [value]="gamer.id">{{gamer.name}}</option>
+        </select>
+        <div #cards2 [hidden] = true>
+            <div class="cards" *ngIf="displayCard">
+                <section *ngFor = "let GamerHeroes of selectedGamers[1].cards; index as i">
+                    <button class="card btnCard" id="{{'1'+i}}" (click)="selectedHero(1,i)"> 
+                        <div>{{GamerHeroes.name}}</div>
+                        <div>{{GamerHeroes.power}}</div>
+                    </button>
+                </section>
+            </div>
+        </div>
+    </div>    
+</div>
+<div class="play">    
+    <div #game [hidden] = true class=""> 
+        <h2>Each player selects a card</h2>
+        <div class="twoColumns">
+            <div #board1 class="board border-blue">  
+                <div>         
+                    <div>{{heroName1}}</div>
+                    <div>{{heroPower1}}</div>   
+                    <h5>{{p1}}: {{points1}}</h5>
+
+                </div>
+            </div>
+            
+            <h4>vs</h4>
+            <div #board2 class="board border-blue">             
+                    <div>{{heroName2}}</div>
+                    <div>{{heroPower2}}</div>  
+                    <h5>{{p2}}: {{points2}}</h5>            
+            </div>
+        </div>
+       
+    </div>
+    
+</div>
+<div class="play">
+    <button #play (click)="playAgain()" class="btnRed" [hidden] = true>Again</button>
+</div>
+
+<app-back-button></app-back-button>

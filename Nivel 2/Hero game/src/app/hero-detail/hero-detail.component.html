@@ -1,0 +1,8 @@
+<div *ngIf="hero" class="container">
+  <h2>{{hero.name | uppercase}} ({{hero.id}})</h2>
+  <div class="detail">
+    <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>      
+    <button (click)="save()">MODIFY</button>
+  </div>
+</div>
+<app-back-button></app-back-button>

@@ -1,0 +1,18 @@
+.navBack{
+    position:absolute;
+    top: 0;
+    right:0;
+}
+.btnBack{
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    cursor:pointer;
+    background-color: white;
+    color:#188ed9;
+}
+
+.btnBack:hover{
+   color: white;
+   background-color: #188ed9;
+}

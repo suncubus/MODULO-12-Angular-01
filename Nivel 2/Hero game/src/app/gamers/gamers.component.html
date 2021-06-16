@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>My Gamers</h2>
+  <div class="add">    
+    <input id="new-gamer" #gamerName  placeholder="Gamer name"/>
+    <button class="add-button" (click)="addGamer(gamerName.value); gamerName.value=''">
+      ADD
+    </button>
+  </div>
+
+  <ul>
+    <li *ngFor="let gamer of gamers">
+      <a routerLink="/gamer-detail/{{gamer.id}}">
+        <span class="list-id">{{gamer.id}}</span>
+        <span class="list-name">{{gamer.name}} ({{gamer.points}} points)</span>
+      </a>
+     <button class="delete" title="Delete Gamer"
+       (click)="delete(gamer)">x</button>
+    </li>
+  </ul>
+</div>
+
+<app-back-button></app-back-button>

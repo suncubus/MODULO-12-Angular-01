@@ -1,0 +1,11 @@
+/* DashboardComponent's private CSS styles */
+
+.top{
+    display:flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+.top a{
+    color:#188cd7;
+    font-weight: bold;
+}
